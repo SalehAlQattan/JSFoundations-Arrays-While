@@ -10,6 +10,9 @@
  */
 function isArrayLengthOdd(numbers) {
   // Your code here
+
+  if (numbers.length % 2 != 0) return true;
+  else return false;
 }
 
 /**
@@ -24,6 +27,8 @@ function isArrayLengthOdd(numbers) {
  */
 function isArrayLengthEven(numbers) {
   // Your code here
+  if (numbers.length % 2 === 0) return true;
+  else return false;
 }
 
 /**
@@ -36,6 +41,7 @@ function isArrayLengthEven(numbers) {
  */
 function addLailaToArray(instructors) {
   // Your code here
+  return [...instructors, 'Laila'];
 }
 
 /**
@@ -48,6 +54,8 @@ function addLailaToArray(instructors) {
  */
 function eliminateTeam(teams) {
   // Your code here
+  const team = teams.pop();
+  return team;
 }
 
 /**
@@ -62,6 +70,10 @@ function eliminateTeam(teams) {
  */
 function secondHalfOfArrayIfItIsEven(fruits) {
   // Your code here
+
+  if (fruits.length % 2 === 0) {
+    return fruits.slice(fruits.length / 2, fruits.length);
+  } else return [];
 }
 
 /**
@@ -80,7 +92,13 @@ function secondHalfOfArrayIfItIsEven(fruits) {
  */
 function youGottaCalmDown(shout) {
   // Your code here
+  const index = shout.indexOf('!');
+
+  if (!shout.endsWith('!')) return shout;
+  else return shout.slice(0, index + 1);
 }
+
+youGottaCalmDown('Taylor Schwifting!!!!!!!!!!!');
 
 module.exports = {
   isArrayLengthOdd,
