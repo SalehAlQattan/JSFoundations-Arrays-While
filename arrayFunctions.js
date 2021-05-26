@@ -98,8 +98,6 @@ function youGottaCalmDown(shout) {
   else return shout.slice(0, index + 1);
 }
 
-youGottaCalmDown('Taylor Schwifting!!!!!!!!!!!');
-
 module.exports = {
   isArrayLengthOdd,
   isArrayLengthEven,
